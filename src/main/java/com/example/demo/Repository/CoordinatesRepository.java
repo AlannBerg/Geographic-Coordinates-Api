@@ -1,6 +1,6 @@
 package com.example.demo.Repository;
 
-import com.example.demo.Model.Coordinates;
+import com.example.demo.Model.CoordinatesEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.data.jpa.repository.Query;
@@ -9,15 +9,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import java.util.UUID;
-
 
 @Repository
-public interface CoordinatesRepository extends JpaRepository<Coordinates,Integer> {
+public interface CoordinatesRepository extends JpaRepository<CoordinatesEntity,Integer> {
 
 
-    @Query("select cordinates from Coordinates cordinates where cordinates.deviceId = :providedId")
-    List<Coordinates> findAllByDeviceID(@Param("providedId") Integer deviceId );
+    @Query("select cordinates from CoordinatesEntity cordinates where cordinates.deviceId = :providedId")
+    List<CoordinatesEntity> findAllByDeviceID(@Param("providedId") Integer deviceId );
 
 
 }

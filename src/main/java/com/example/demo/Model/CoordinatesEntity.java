@@ -1,5 +1,6 @@
 package com.example.demo.Model;
 
+import com.example.demo.Validator.Coordinates;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,7 +15,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Entity
 @Table(name = "coordinates")
-public class Coordinates {
+public class CoordinatesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

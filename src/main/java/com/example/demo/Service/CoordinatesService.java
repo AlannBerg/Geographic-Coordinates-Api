@@ -4,13 +4,14 @@ import com.example.demo.Contract.CoordinatesDTO;
 import com.example.demo.Exception.CoordinatesForDeviceNotFoundExeception;
 import com.example.demo.Exception.CoordinatesIncorectFormExeception;
 import com.example.demo.Mapper.CoordinatesMapperImpl;
-import com.example.demo.Model.Coordinates;
+import com.example.demo.Model.CoordinatesEntity;
 import com.example.demo.Repository.CoordinatesRepository;
-import com.example.demo.Validator.StringValidator;
+import com.example.demo.Validator.Coordinates;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,44 +26,36 @@ public class CoordinatesService {
     private CoordinatesMapperImpl mapper;
 
 
-    public void save(CoordinatesDTO coordinatesDTO) throws CoordinatesIncorectFormExeception {
-        //validation
-
-        String latitude = coordinatesDTO.getLatitude();
-        String longitude = coordinatesDTO.getLongitude();
-
-        if(StringValidator.coordinateIsNotValid(latitude) || StringValidator.coordinateIsNotValid(longitude)){
-            throw new CoordinatesIncorectFormExeception(latitude,longitude);
-        }
+    public void save(@Valid CoordinatesDTO coordinatesDTO) throws CoordinatesIncorectFormExeception {
 
 
-        Coordinates coordinates = mapper.coordinatesDTOtoEntity(coordinatesDTO);
+        CoordinatesEntity coordinatesEntity = mapper.coordinatesDTOtoEntity(coordinatesDTO);
 
 
-        log.info("Saving new coordinates: {} , {}, {} ", coordinates.getDeviceId(),coordinates.getLatitude(),coordinates.getLongitude());
+        log.info("Saving new coordinates: {} , {}, {} ", coordinatesEntity.getDeviceId(), coordinatesEntity.getLatitude(), coordinatesEntity.getLongitude());
 
-        coordinatesRepository.save(coordinates);
+        coordinatesRepository.save(coordinatesEntity);
     }
 
     public List<CoordinatesDTO> getAllCoordinates() {
         log.info("Getting all coordinates from database");
 
         return coordinatesRepository.findAll().stream().map(
-                coordinates -> mapper.coordinatesToDTO(coordinates)
+                coordinatesEntity -> mapper.coordinatesToDTO(coordinatesEntity)
         ).collect(Collectors.toList());
     }
 
     public List<CoordinatesDTO> findByID(Integer id) throws CoordinatesForDeviceNotFoundExeception{
 
-        List<Coordinates> coordinatesList = coordinatesRepository.findAllByDeviceID(id);
+        List<CoordinatesEntity> coordinatesEntityList = coordinatesRepository.findAllByDeviceID(id);
 
-        if(coordinatesList.isEmpty()){
+        if(coordinatesEntityList.isEmpty()){
 
             throw new CoordinatesForDeviceNotFoundExeception(id);
         }
 
         log.info("Returning list of coordinates for device id = {}", id);
-        return coordinatesList.stream().map(
-                coordinates -> mapper.coordinatesToDTO(coordinates)).collect(Collectors.toList());
+        return coordinatesEntityList.stream().map(
+                coordinatesEntity -> mapper.coordinatesToDTO(coordinatesEntity)).collect(Collectors.toList());
     }
 }

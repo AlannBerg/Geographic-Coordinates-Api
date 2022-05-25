@@ -1,5 +1,6 @@
 package com.example.demo.Contract;
 
+import com.example.demo.Validator.Coordinates;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 
+@Coordinates
 @Setter
 @Getter
 @AllArgsConstructor

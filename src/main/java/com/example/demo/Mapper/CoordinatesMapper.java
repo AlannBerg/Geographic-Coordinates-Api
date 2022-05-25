@@ -1,16 +1,15 @@
 package com.example.demo.Mapper;
 
 import com.example.demo.Contract.CoordinatesDTO;
-import com.example.demo.Model.Coordinates;
+import com.example.demo.Model.CoordinatesEntity;
 import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface CoordinatesMapper {
 
-    CoordinatesDTO coordinatesToDTO(Coordinates coordinates);
+    CoordinatesDTO coordinatesToDTO(CoordinatesEntity coordinatesEntity);
 
-    Coordinates coordinatesDTOtoEntity(CoordinatesDTO dto);
+    CoordinatesEntity coordinatesDTOtoEntity(CoordinatesDTO dto);
 
 
 }
