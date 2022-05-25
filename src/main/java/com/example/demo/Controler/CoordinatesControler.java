@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.text.DecimalFormat;
 import java.util.List;
+import java.util.UUID;
 
 @RequestMapping("/coordinates")
 @RestController
@@ -20,7 +21,6 @@ public class CoordinatesControler {
     @Autowired
     private CoordinatesService coordinatesService;
 
-    private DecimalFormat df = new DecimalFormat("0000000");
 
     @GetMapping("/getAll")
     public ResponseEntity<List<CoordinatesDTO>> getAllCoordinates(){
@@ -30,7 +30,7 @@ public class CoordinatesControler {
     }
 
     @PostMapping ("/getAllForThisDevice")
-    public ResponseEntity<List<CoordinatesDTO>> getAllForThisDevice( @RequestParam Integer id) throws CoordinatesForDeviceNotFoundExeception {
+    public ResponseEntity<List<CoordinatesDTO>> getAllForThisDevice(@RequestParam int id) throws CoordinatesForDeviceNotFoundExeception {
         return new ResponseEntity<>(
                 coordinatesService.findByID(id),
                 HttpStatus.OK

@@ -8,7 +8,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
+
+import java.util.UUID;
 
 
 @Repository
@@ -16,6 +17,7 @@ public interface CoordinatesRepository extends JpaRepository<Coordinates,Integer
 
 
     @Query("select cordinates from Coordinates cordinates where cordinates.deviceId = :providedId")
-    List<Coordinates> findAllByDeviceID(@Param("providedId") int deviceId );
+    List<Coordinates> findAllByDeviceID(@Param("providedId") Integer deviceId );
+
 
 }
