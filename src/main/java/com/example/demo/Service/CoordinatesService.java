@@ -6,7 +6,6 @@ import com.example.demo.Exception.CoordinatesIncorectFormExeception;
 import com.example.demo.Mapper.CoordinatesMapperImpl;
 import com.example.demo.Model.CoordinatesEntity;
 import com.example.demo.Repository.CoordinatesRepository;
-import com.example.demo.Validator.Coordinates;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
