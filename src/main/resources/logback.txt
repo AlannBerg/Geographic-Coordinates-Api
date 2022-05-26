@@ -1,0 +1,23 @@
+
+2022-05-26 19:17:24.939  INFO 11972 --- [main] .e.d.GeographicCoordinatesApiApplication : Starting GeographicCoordinatesApiApplication using Java 17.0.1 on DESKTOP-LTSL2O5 with PID 11972 (C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo\target\classes started by Alan in C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo)
+2022-05-26 19:17:24.943  INFO 11972 --- [main] .e.d.GeographicCoordinatesApiApplication : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 19:17:25.645  INFO 11972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-26 19:17:25.729  INFO 11972 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interfaces.
+2022-05-26 19:17:26.306  INFO 11972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-26 19:17:26.322  INFO 11972 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-26 19:17:26.322  INFO 11972 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-26 19:17:26.473  INFO 11972 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-26 19:17:26.473  INFO 11972 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1480 ms
+2022-05-26 19:17:26.916  INFO 11972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-26 19:17:27.247  INFO 11972 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-26 19:17:27.945  INFO 11972 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 19:17:28.369  WARN 11972 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 19:17:28.658  INFO 11972 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-26 19:17:28.668  INFO 11972 --- [main] .e.d.GeographicCoordinatesApiApplication : Started GeographicCoordinatesApiApplication in 4.38 seconds (JVM running for 5.51)
+2022-05-26 19:17:33.808  INFO 11972 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 19:17:33.809  INFO 11972 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-26 19:17:33.809  INFO 11972 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-26 19:17:33.922  WARN 11972 --- [http-nio-8080-exec-2] c.e.d.E.CoordinatesIncorectFormAdvice    : Exception, wrong coordinates. Exception message: Coordinates : test , test are not correct. Coordinates must have 7 digits
+2022-05-26 19:18:13.585  INFO 11972 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 19:18:13.587  INFO 11972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 19:18:13.595  INFO 11972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
