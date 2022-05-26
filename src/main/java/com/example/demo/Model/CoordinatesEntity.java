@@ -1,10 +1,8 @@
 package com.example.demo.Model;
 
-import com.example.demo.Validator.Coordinates;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

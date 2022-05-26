@@ -12,9 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.text.DecimalFormat;
 import java.util.List;
-import java.util.UUID;
 
 @RequestMapping("/coordinates")
 @RestController
@@ -22,8 +20,6 @@ public class CoordinatesControler {
 
     @Autowired
     private CoordinatesService coordinatesService;
-
-
 
     @GetMapping("/getAll")
     @ApiOperation(value = "Returns all coordinates and device ID from database")

@@ -7,8 +7,6 @@ import com.example.demo.Mapper.CoordinatesMapperImpl;
 import com.example.demo.Model.CoordinatesEntity;
 import com.example.demo.Repository.CoordinatesRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
