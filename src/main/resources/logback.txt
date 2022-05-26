@@ -292,3 +292,122 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.we
 2022-05-26 19:53:33.687  INFO 22044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-05-26 19:53:33.688  INFO 22044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2022-05-26 19:53:33.716  INFO 22044 --- [http-nio-8080-exec-1] c.e.demo.Service.CoordinatesService      : Getting all coordinates from database
+2022-05-26 20:10:58.346  INFO 22044 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:10:58.347  INFO 22044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 20:10:58.357  INFO 22044 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-26 20:11:10.817  INFO 13040 --- [main] .e.d.GeographicCoordinatesApiApplication : Starting GeographicCoordinatesApiApplication using Java 17.0.1 on DESKTOP-LTSL2O5 with PID 13040 (C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo\target\classes started by Alan in C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo)
+2022-05-26 20:11:10.819  INFO 13040 --- [main] .e.d.GeographicCoordinatesApiApplication : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 20:11:12.393  INFO 13040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-26 20:11:12.496  INFO 13040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interfaces.
+2022-05-26 20:11:13.673  INFO 13040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-26 20:11:14.255  INFO 13040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3276 ms
+2022-05-26 20:11:14.931  INFO 13040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-26 20:11:15.241  INFO 13040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-26 20:11:16.076  INFO 13040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:11:16.603  WARN 13040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 20:11:16.713  INFO 13040 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-26 20:11:17.031  INFO 13040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-26 20:11:17.032  INFO 13040 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-26 20:11:17.047  INFO 13040 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-26 20:11:17.072  INFO 13040 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-26 20:11:17.196  INFO 13040 --- [main] .e.d.GeographicCoordinatesApiApplication : Started GeographicCoordinatesApiApplication in 6.889 seconds (JVM running for 9.885)
+2022-05-26 20:11:17.229  INFO 13040 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:11:17.231  INFO 13040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 20:11:17.241  INFO 13040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-26 20:11:22.629  INFO 24392 --- [main] .e.d.GeographicCoordinatesApiApplication : Starting GeographicCoordinatesApiApplication using Java 17.0.1 on DESKTOP-LTSL2O5 with PID 24392 (C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo\target\classes started by Alan in C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo)
+2022-05-26 20:11:22.631  INFO 24392 --- [main] .e.d.GeographicCoordinatesApiApplication : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 20:11:23.623  INFO 24392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-26 20:11:23.714  INFO 24392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2022-05-26 20:11:24.228  INFO 24392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-26 20:11:24.236  INFO 24392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-26 20:11:24.237  INFO 24392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-26 20:11:24.370  INFO 24392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-26 20:11:24.371  INFO 24392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
+2022-05-26 20:11:24.777  INFO 24392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-26 20:11:25.086  INFO 24392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-26 20:11:25.715  INFO 24392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:11:26.200  WARN 24392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 20:11:26.304  INFO 24392 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-26 20:11:26.617  INFO 24392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-26 20:11:26.618  INFO 24392 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-26 20:11:26.632  INFO 24392 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-26 20:11:26.656  INFO 24392 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-26 20:11:26.773  INFO 24392 --- [main] .e.d.GeographicCoordinatesApiApplication : Started GeographicCoordinatesApiApplication in 4.756 seconds (JVM running for 6.567)
+2022-05-26 20:11:34.528  INFO 24392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 20:11:34.529  INFO 24392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-26 20:11:34.530  INFO 24392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-26 20:18:55.443  INFO 24392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:18:55.445  INFO 24392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 20:18:55.454  INFO 24392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-26 20:19:01.272  INFO 544 --- [main] .e.d.GeographicCoordinatesApiApplication : Starting GeographicCoordinatesApiApplication using Java 17.0.1 on DESKTOP-LTSL2O5 with PID 544 (C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo\target\classes started by Alan in C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo)
+2022-05-26 20:19:01.275  INFO 544 --- [main] .e.d.GeographicCoordinatesApiApplication : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 20:19:02.090  INFO 544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-26 20:19:02.160  INFO 544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2022-05-26 20:19:02.668  INFO 544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-26 20:19:02.675  INFO 544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-26 20:19:02.676  INFO 544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-26 20:19:02.801  INFO 544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-26 20:19:02.801  INFO 544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1491 ms
+2022-05-26 20:19:03.192  INFO 544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-26 20:19:03.497  INFO 544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-26 20:19:04.207  INFO 544 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:19:04.687  WARN 544 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 20:19:04.787  INFO 544 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-26 20:19:05.072  INFO 544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-26 20:19:05.074  INFO 544 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-26 20:19:05.090  INFO 544 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-26 20:19:05.114  INFO 544 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-26 20:19:05.236  INFO 544 --- [main] .e.d.GeographicCoordinatesApiApplication : Started GeographicCoordinatesApiApplication in 4.427 seconds (JVM running for 5.241)
+2022-05-26 20:19:13.708  INFO 544 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 20:19:13.709  INFO 544 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-26 20:19:13.710  INFO 544 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-26 20:21:45.858  INFO 544 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:21:45.860  INFO 544 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 20:21:45.873  INFO 544 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-26 20:21:53.840  INFO 20476 --- [main] .e.d.GeographicCoordinatesApiApplication : Starting GeographicCoordinatesApiApplication using Java 17.0.1 on DESKTOP-LTSL2O5 with PID 20476 (C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo\target\classes started by Alan in C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo)
+2022-05-26 20:21:53.843  INFO 20476 --- [main] .e.d.GeographicCoordinatesApiApplication : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 20:21:54.917  INFO 20476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-26 20:21:55.187  INFO 20476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 256 ms. Found 1 JPA repository interfaces.
+2022-05-26 20:21:55.976  INFO 20476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-26 20:21:55.984  INFO 20476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-26 20:21:55.984  INFO 20476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-26 20:21:56.119  INFO 20476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-26 20:21:56.119  INFO 20476 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2238 ms
+2022-05-26 20:21:56.547  INFO 20476 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-26 20:21:56.841  INFO 20476 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-26 20:21:57.508  INFO 20476 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:21:58.026  WARN 20476 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 20:21:58.134  INFO 20476 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-26 20:21:58.437  INFO 20476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-26 20:21:58.438  INFO 20476 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-26 20:21:58.454  INFO 20476 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-26 20:21:58.478  INFO 20476 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-26 20:21:58.615  INFO 20476 --- [main] .e.d.GeographicCoordinatesApiApplication : Started GeographicCoordinatesApiApplication in 5.175 seconds (JVM running for 6.095)
+2022-05-26 20:22:18.117  INFO 20476 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:22:18.118  INFO 20476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 20:22:18.128  INFO 20476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-26 20:22:25.371  INFO 23300 --- [main] .e.d.GeographicCoordinatesApiApplication : Starting GeographicCoordinatesApiApplication using Java 17.0.1 on DESKTOP-LTSL2O5 with PID 23300 (C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo\target\classes started by Alan in C:\Users\Alan\Desktop\Pjatk\ZADANIE REKRUTACYJNE2\demo)
+2022-05-26 20:22:25.373  INFO 23300 --- [main] .e.d.GeographicCoordinatesApiApplication : No active profile set, falling back to 1 default profile: "default"
+2022-05-26 20:22:26.302  INFO 23300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-26 20:22:26.370  INFO 23300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2022-05-26 20:22:26.937  INFO 23300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-26 20:22:26.947  INFO 23300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-26 20:22:26.947  INFO 23300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-26 20:22:27.079  INFO 23300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-26 20:22:27.080  INFO 23300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1668 ms
+2022-05-26 20:22:27.485  INFO 23300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-26 20:22:27.824  INFO 23300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-26 20:22:28.640  INFO 23300 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:22:29.201  WARN 23300 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-26 20:22:29.318  INFO 23300 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-26 20:22:29.640  INFO 23300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-26 20:22:29.641  INFO 23300 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-05-26 20:22:29.658  INFO 23300 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-05-26 20:22:29.681  INFO 23300 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-05-26 20:22:29.808  INFO 23300 --- [main] .e.d.GeographicCoordinatesApiApplication : Started GeographicCoordinatesApiApplication in 4.946 seconds (JVM running for 5.956)
+2022-05-26 20:22:33.347  INFO 23300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-26 20:22:33.348  INFO 23300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-26 20:22:33.349  INFO 23300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-26 20:23:31.442  INFO 23300 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-26 20:23:31.444  INFO 23300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-26 20:23:31.454  INFO 23300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
