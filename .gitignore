@@ -1,8 +1,14 @@
 HELP.md
+
+
+src/main/resources/logback.txt
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+!**/src/main/**/resources/**.txt
 
 ### STS ###
 .apt_generated
