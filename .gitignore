@@ -1,6 +1,5 @@
 HELP.md
 
-
 src/main/resources/logback.txt
 
 target/
@@ -8,7 +7,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-!**/src/main/**/resources/**.txt
 
 ### STS ###
 .apt_generated

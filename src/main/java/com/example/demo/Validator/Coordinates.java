@@ -1,5 +1,7 @@
 package com.example.demo.Validator;
 
+import org.springframework.stereotype.Component;
+
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;

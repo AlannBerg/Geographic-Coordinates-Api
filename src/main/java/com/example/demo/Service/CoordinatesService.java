@@ -6,9 +6,12 @@ import com.example.demo.Exception.CoordinatesIncorectFormExeception;
 import com.example.demo.Mapper.CoordinatesMapperImpl;
 import com.example.demo.Model.CoordinatesEntity;
 import com.example.demo.Repository.CoordinatesRepository;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -16,6 +19,9 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Service
+@Validated
+@Component
+@AllArgsConstructor
 public class CoordinatesService {
 
     @Autowired
