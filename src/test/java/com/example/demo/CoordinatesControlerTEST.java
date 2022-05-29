@@ -15,6 +15,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.ResponseEntity;
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
@@ -34,11 +36,6 @@ public class CoordinatesControlerTEST {
     @MockBean
     private CoordinatesService coordinatesService;
 
-    @MockBean
-    private CoordinatesRepository coordinatesRepository;
-
-    @MockBean
-    private CoordinatesMapperImpl coordinatesMapper;
 
 
     private  final CoordinatesDTO coordinatesDTO = new CoordinatesDTO(
@@ -78,7 +75,7 @@ public class CoordinatesControlerTEST {
         String uri = "/coordinates/getAllForThisDevice";
         int givenId = 1;
 
-        when(coordinatesService.findByID(givenId)).thenReturn(List.of(coordinatesDTO));
+        when(coordinatesService.findByDeviceID(givenId)).thenReturn(List.of(coordinatesDTO));
 
         RequestBuilder request = MockMvcRequestBuilders.post(uri)
                 .param("id", String.valueOf(givenId))
@@ -116,6 +113,57 @@ public class CoordinatesControlerTEST {
         Assert.assertEquals("1234567",argumentCaptor.getValue().getLongitude());
 
     }
+
+    @Test()
+    void addIncorrectCoordinateswithLetterShouldHaveStatus400andReturnMessage() throws Exception {
+
+        String uri = "/coordinates/add";
+
+
+        RequestBuilder request = MockMvcRequestBuilders.post(uri)
+                .content("   {\n" +
+                        "        \"deviceId\": 10,\n" +
+                        "        \"latitude\": \"1234b67\",\n" +
+                        "        \"longitude\": \"1234567\"\n" +
+                        "    }")
+                .contentType(MediaType.APPLICATION_JSON)
+                ;
+
+
+         MockHttpServletResponse response = (mvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andReturn().getResponse());
+
+        Assert.assertEquals("Coordinates : 1234b67 , 1234567 are not correct. Coordinates must have 7 digits",
+                response.getContentAsString());
+
+    }
+
+    @Test()
+    void addToShortCoordinatesShouldHaveStatus400andReturnMessage() throws Exception {
+
+        String uri = "/coordinates/add";
+
+
+        RequestBuilder request = MockMvcRequestBuilders.post(uri)
+                .content("   {\n" +
+                        "        \"deviceId\": 10,\n" +
+                        "        \"latitude\": \"17\",\n" +
+                        "        \"longitude\": \"17\"\n" +
+                        "    }")
+                .contentType(MediaType.APPLICATION_JSON)
+                ;
+
+
+        MockHttpServletResponse response = (mvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andReturn().getResponse());
+
+        Assert.assertEquals("Coordinates : 17 , 17 are not correct. Coordinates must have 7 digits",
+                response.getContentAsString());
+
+    }
+
     private static String asJsonString(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);

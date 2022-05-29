@@ -9,7 +9,6 @@ import com.example.demo.Repository.CoordinatesRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
@@ -20,21 +19,17 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 @Validated
-@Component
 @AllArgsConstructor
 public class CoordinatesService {
 
     @Autowired
     private CoordinatesRepository coordinatesRepository;
 
-    @Autowired
-    private CoordinatesMapperImpl mapper;
-
 
     public void save(@Valid CoordinatesDTO coordinatesDTO) throws CoordinatesIncorectFormExeception {
 
 
-        CoordinatesEntity coordinatesEntity = mapper.coordinatesDTOtoEntity(coordinatesDTO);
+        CoordinatesEntity coordinatesEntity = CoordinatesMapperImpl.INSTANCE.coordinatesDTOtoEntity(coordinatesDTO);
 
 
         log.info("Saving new coordinates: {} , {}, {} ", coordinatesEntity.getDeviceId(), coordinatesEntity.getLatitude(), coordinatesEntity.getLongitude());
@@ -46,11 +41,11 @@ public class CoordinatesService {
         log.info("Getting all coordinates from database");
 
         return coordinatesRepository.findAll().stream().map(
-                coordinatesEntity -> mapper.coordinatesToDTO(coordinatesEntity)
+                CoordinatesMapperImpl.INSTANCE::coordinatesToDTO
         ).collect(Collectors.toList());
     }
 
-    public List<CoordinatesDTO> findByID(Integer id) throws CoordinatesForDeviceNotFoundExeception{
+    public List<CoordinatesDTO> findByDeviceID(Integer id) throws CoordinatesForDeviceNotFoundExeception{
 
         List<CoordinatesEntity> coordinatesEntityList = coordinatesRepository.findAllByDeviceID(id);
 
@@ -61,6 +56,6 @@ public class CoordinatesService {
 
         log.info("Returning list of coordinates for device id = {}", id);
         return coordinatesEntityList.stream().map(
-                coordinatesEntity -> mapper.coordinatesToDTO(coordinatesEntity)).collect(Collectors.toList());
+                CoordinatesMapperImpl.INSTANCE::coordinatesToDTO).collect(Collectors.toList());
     }
 }

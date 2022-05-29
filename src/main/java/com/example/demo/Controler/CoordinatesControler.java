@@ -32,7 +32,7 @@ public class CoordinatesControler {
     @ApiOperation(value = "Returns all coordinates sent from specific device")
     public ResponseEntity<List<CoordinatesDTO>> getAllForThisDevice(@RequestParam int id) throws CoordinatesForDeviceNotFoundExeception {
         return new ResponseEntity<>(
-                coordinatesService.findByID(id),
+                coordinatesService.findByDeviceID(id),
                 HttpStatus.OK
         );
     }

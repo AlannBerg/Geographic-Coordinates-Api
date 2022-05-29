@@ -4,10 +4,13 @@ package com.example.demo.Validator;
 import com.example.demo.Contract.CoordinatesDTO;
 import com.example.demo.Exception.CoordinatesIncorectFormExeception;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+@Validated
+@Component
 public class CoordinatesValidator implements ConstraintValidator<Coordinates, CoordinatesDTO> {
 
 
